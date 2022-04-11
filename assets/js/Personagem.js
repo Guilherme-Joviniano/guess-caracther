@@ -32,9 +32,10 @@ Personagem.prototype.criarElemento = function(){
 Personagem.prototype.showRealName = function(){
     
 }
+const pathImg = './assets/imgs/'
+const caracther0 = new Personagem('Leonardo DiCaprio', `${pathImg}leonarda-di-caprio.jpg`)
 
-const caracther0 = new Personagem('Leonardo Di Caprio', './assets/imgs/leonarda-di-caprio.jpg')
-
+localStorage.setItem('instance', instaces)
 
 
 
