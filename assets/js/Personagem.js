@@ -32,8 +32,32 @@ Personagem.prototype.criarElemento = function(){
 Personagem.prototype.showRealName = function(){
     
 }
+let allCaracther = []
+const listNames = [
+    'Leonardo Dicaprio',
+    'Will Smith',
+    'Oscar Isaac',
+    'Scarllet Johansson',
+    'Elizabeth Olsen',
+    'Paul Dano',
+    'Milly Bob Browm',
+    'Juliana Paes',
+    'Henry Cavil',
+    'Tom Hanks'
+ ]
 const pathImg = './assets/imgs/'
-const caracther0 = new Personagem('Leonardo DiCaprio', `${pathImg}leonarda-di-caprio.jpg`)
+
+
+function makeCarachers(){
+    for(let i = 0; i< listNames.length; i++){
+        allCaracther[i] = new Personagem(listNames[i],pathImg + listNames[i].toLowerCase() + '.jpg')
+        
+    }
+    return allCaracther
+}
+
+makeCarachers()
+console.log(allCaracther[0].photo);
 
 localStorage.setItem('instance', instaces)
 
